@@ -16,13 +16,13 @@ class AppUtil {
   ];
 
   String getLanguageName() {
-    String selectedLanguageCode = GetStorage(AppConfig.storageBox).read("languageCode");
+    String selectedLanguageCode = getLanguageCode();
     for (var language in languages) {
       if (selectedLanguageCode == language['code']) {
         return language['name'];
       }
     }
-    return 'Tiếng Việt';
+    return "Tiếng Việt";
   }
 
   String getLanguageCode() {
