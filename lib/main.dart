@@ -8,6 +8,7 @@ Future<void> main() async {
   await initApp();
   runApp(
     GetMaterialApp(
+      color: Colors.grey.shade200,
       locale: AppConfig.locale,
       initialRoute: "/home",
       getPages: RouteConfig.routes,

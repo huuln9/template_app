@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:template_app/controller/setting_language_controller.dart';
 import 'package:template_app/util/app_util.dart';
+import 'package:template_app/widget/common/my_app_bar.dart';
 import 'package:template_app/widget/common/my_bottom_bar.dart';
 
 class SettingLanguage extends GetView<SettingLanguageController> {
@@ -10,7 +11,7 @@ class SettingLanguage extends GetView<SettingLanguageController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("ngon ngu".tr)),
+      appBar: MyAppBar(title: "ngon ngu".tr),
       body: ListView.builder(
         itemCount: AppUtil().languages.length,
         itemBuilder: (BuildContext context, int index) {
@@ -36,7 +37,7 @@ class SettingLanguage extends GetView<SettingLanguageController> {
           );
         },
       ),
-      bottomNavigationBar: const MyBottomBar(index: 1),
+      bottomNavigationBar: const MyBottomBar(),
     );
   }
 }
